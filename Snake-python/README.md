@@ -8,7 +8,8 @@ USAGE:
 
        I created this game based of the simple classic snake game, but on i also added some new features to it
        like some fruits have higher scores but hard to bite. The score of the fruit will increase when the 
-       player level ups and the color of the fruit will change and also it size will decrease and that make the        game hard to play
+       player level ups and the color of the fruit will change and also it size will decrease and that make the 
+       game hard to play
 
 
 WHAT I LEARNED:
