@@ -1,6 +1,10 @@
 package com.games;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Rectangle;
+import java.awt.Graphics2D;
+import java.awt.Graphics;
+import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
@@ -11,12 +15,12 @@ import javax.swing.*;
 public class gameLogic extends JPanel implements KeyListener, ActionListener {
     // variables
     private boolean play = false;
-    private int numberOfBricks = 21;
-    private int col = 3;
+    private int col = 7;
     private int row = 7;
+    private int numberOfBricks =col*row;
     private int score;
     private Timer time;
-    private int delay = 6;
+    private int delay = 0;
     private int playerX = 310;
     private int playerY = 550;
     private int ballPosX = 120;
@@ -31,8 +35,8 @@ public class gameLogic extends JPanel implements KeyListener, ActionListener {
     private int screenWidth = windowWidth - borderSize;
     private int screenHeight = windowHeight - borderSize;
     private int borderWidth = 3;
-    private int paddileHeight = 8;
-    private int paddileWidth = 100;
+    private int paddleHeight = 8;
+    private int paddleWidth = 100;
     private int ballSize=20;
     private MapGenerator map;
 
@@ -67,12 +71,13 @@ public class gameLogic extends JPanel implements KeyListener, ActionListener {
 
         //paddle
         g.setColor(Color.green);
-        g.fillRect(playerX, playerY, paddileWidth, paddileHeight);
+        g.fillRect(playerX, playerY, paddleWidth, paddleHeight);
 
         //ball
         g.setColor(Color.yellow);
         g.fillOval(ballPosX, ballPosY, ballSize, ballSize);
 
+        //End game->lost
         if (ballPosY > 560) {
             play = false;
             ballXDir = 0;
@@ -85,6 +90,7 @@ public class gameLogic extends JPanel implements KeyListener, ActionListener {
             g.drawString("Press enter to Restart", 215, 335);
             g.dispose();
         }
+        //End game->win
         if (numberOfBricks <= 0) {
             play = false;
             ballXDir = 0;
@@ -92,16 +98,16 @@ public class gameLogic extends JPanel implements KeyListener, ActionListener {
             g.setColor(Color.GREEN);
             g.setFont(new Font("serif", Font.BOLD, 50));
             g.drawString("You win!!!", 225, 300);
-            g.setColor(Color.green);
             g.setFont(new Font("serif", Font.BOLD, 30));
             g.drawString("Press enter to Restart", 215, 335);
             g.dispose();
         }
     }
-
+    //collision
     @Override
+    //collision with the paddle
     public void actionPerformed(ActionEvent e) {
-        if (new Rectangle(ballPosX, ballPosY, 20, 20).intersects(new Rectangle(playerX, 550, 100, 8))) {
+        if (new Rectangle(ballPosX, ballPosY, ballSize, ballSize).intersects(new Rectangle(playerX, playerY, paddleWidth, paddleHeight))) {
             ballYDir = ballYDir * -1;
         }
         A:
@@ -113,7 +119,7 @@ public class gameLogic extends JPanel implements KeyListener, ActionListener {
                     int brickWidth = map.brickWidth;
                     int brickHeight = map.brickHeight;
                     Rectangle rect = new Rectangle(brickX, brickY, brickWidth, brickHeight);
-                    Rectangle ballRect = new Rectangle(ballPosX, ballPosY, 20, 20);
+                    Rectangle ballRect = new Rectangle(ballPosX, ballPosY, ballSize, ballSize);
                     Rectangle brickRect = rect;
                     if (ballRect.intersects(brickRect)) {
                         map.setBrickValue(0, i, j);
@@ -131,6 +137,7 @@ public class gameLogic extends JPanel implements KeyListener, ActionListener {
             }
         }
         time.start();
+        //collision with the border
         if (play) {
             ballPosX += ballXDir;
             ballPosY += ballYDir;
@@ -150,14 +157,10 @@ public class gameLogic extends JPanel implements KeyListener, ActionListener {
     }
 
     @Override
-    public void keyTyped(KeyEvent e) {
-
-    }
+    public void keyTyped(KeyEvent e) { /* Empty function*/ }
 
     @Override
-    public void keyReleased(KeyEvent e) {
-
-    }
+    public void keyReleased(KeyEvent e) { /* Empty function*/ }
 
     @Override
     public void keyPressed(KeyEvent e) {
@@ -181,8 +184,8 @@ public class gameLogic extends JPanel implements KeyListener, ActionListener {
                 ballXDir = -1;
                 ballYDir = -2;
                 score = 0;
-                numberOfBricks = 21;
-                map = new MapGenerator(3, 7);
+                numberOfBricks = col*row;
+                map = new MapGenerator(row, col);
                 repaint();
             }
 
@@ -190,7 +193,7 @@ public class gameLogic extends JPanel implements KeyListener, ActionListener {
 
 
     }
-
+    //motion function
     public void moveLeft() {
         play = true;
         playerX -= 20;
