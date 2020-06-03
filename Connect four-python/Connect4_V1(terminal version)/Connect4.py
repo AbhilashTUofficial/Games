@@ -27,7 +27,10 @@ def reverseBoard(board):
 # means, to check weather the location
 # is empty or not.
 def isValidLoc(board, col):
-    return board[rowCount - 1, col] == 0
+    if (board[rowCount - 1, col] == 0):
+        return True
+    else:
+        return False
 
 
 # When the player drops a piece to the board
@@ -68,13 +71,13 @@ def winningMove(board, piece):
                 return True
     # positive diagonal check
     for c in range(colCount - 3):
-        for r in range(rowCount-3):
+        for r in range(rowCount - 3):
             if board[r][c] == piece and board[r + 1][c + 1] == piece and board[r + 2][c + 2] == piece and board[r + 3][
                 c + 3] == piece:
                 return True
     # negative diagonal check
-    for c in range(colCount-3):
-        for r in range(3,rowCount):
+    for c in range(colCount - 3):
+        for r in range(3, rowCount):
             if board[r][c] == piece and board[r - 1][c + 1] == piece and board[r - 2][c + 2] == piece and board[r - 3][
                 c + 3] == piece:
                 return True
@@ -86,11 +89,22 @@ reverseBoard(board)
 while play:
     # getting input from the player 1
     if turn == 1:
-        col = int(input("Player 1 make your selection(0-6): "))
-        turn = 2
-        if isValidLoc(board, col):
-            row = getTheLowestRow(board, col)
-            dropPiece(board, row, col, 1)
+        # modified while loop to perform like a do while loop
+        while True:
+            while True:
+                col = int(input("Player 1 make your selection(0-6): "))
+                if (0 > col or col > colCount):
+                    print("ERROR 404 COLUMN NOT FOUND!")
+                else:
+                    break
+            turn = 2
+
+            if isValidLoc(board, col):
+                row = getTheLowestRow(board, col)
+                dropPiece(board, row, col, 1)
+                break
+            else:
+                print("ERROR 503 THE COLUMN IS FULL")
         reverseBoard(board)
         if winningMove(board, 1):
             print("Player 1 win!!!")
@@ -99,11 +113,23 @@ while play:
 
     else:
         # getting input from the player 2
-        col = int(input("Player 2 make your selection(0-6): "))
-        turn = 1
-        if isValidLoc(board, col):
-            row = getTheLowestRow(board, col)
-            dropPiece(board, row, col, 2)
+        # modified while loop to perform like a do while loop
+        while True:
+            while True:
+                col = int(input("Player 2 make your selection(0-6): "))
+                if (0 > col or col > colCount):
+                    print("ERROR 404 COLUMN NOT FOUND!")
+
+                else:
+                    break
+            turn = 1
+
+            if isValidLoc(board, col):
+                row = getTheLowestRow(board, col)
+                dropPiece(board, row, col, 2)
+                break
+            else:
+                print("ERROR 503 THE COLUMN IS FULL")
         reverseBoard(board)
         if winningMove(board, 2):
             print("Player 2 win!!!")
