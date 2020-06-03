@@ -66,7 +66,7 @@ def winningMove(board, piece):
     # vertical check
     for c in range(colCount):
         for r in range(rowCount - 3):
-            if board[r][c] == piece and board[r + 1][c] == piece and board[r + 2][c] == piece and board[r + 2][
+            if board[r][c] == piece and board[r + 1][c] == piece and board[r + 2][c] == piece and board[r + 3][
                 c] == piece:
                 return True
     # positive diagonal check
