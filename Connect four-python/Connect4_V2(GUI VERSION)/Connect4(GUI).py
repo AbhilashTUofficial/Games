@@ -97,7 +97,7 @@ height = (rowCount + 1) * squareSize
 size = (width, height)
 radius = int(squareSize / 2 - 5)
 screen = pygame.display.set_mode(size);
-
+font=pygame.font.SysFont("monospace",75)
 
 # draw grids
 def drawGrid(board):
@@ -145,7 +145,9 @@ while play:
                     dropPiece(board, row, col, 1)
 
                 if winningMove(board, 1):
-                    print("Player 1 win!!!")
+                    pygame.draw.rect(screen, (0, 0, 0), (0, 0, width, squareSize))
+                    label=font.render("Player 1 wins!!!",1,(255,0,0))
+                    screen.blit(label,(40,10))
                     play = False
 
                 # getting input from the player 2
@@ -161,7 +163,9 @@ while play:
                     dropPiece(board, row, col, 2)
 
                 if winningMove(board, 2):
-                    print("Player 2 win!!!")
+                    pygame.draw.rect(screen, (0, 0, 0), (0, 0, width, squareSize))
+                    label = font.render("Player 2 wins!!!", 1, (0, 255, 0))
+                    screen.blit(label, (40, 10))
                     play = False
     if (not play):
         drawGrid(reverseBoard(board))
