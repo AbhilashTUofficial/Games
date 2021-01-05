@@ -8,8 +8,8 @@ Developing games is one of the best ways to learn to program. So I have to build
 [<img align="left" alt="python" width="26px" src="https://github.com/AbhilashTUofficial/AbhilashTuofficial/blob/main/logos/tools/python.png">][python]
 [<img align="left" alt="Java" width="32px" src="https://github.com/AbhilashTUofficial/AbhilashTuofficial/blob/main/logos/tools/java.png">][java]
 <br/><br/>
-![GitHub last commit](https://img.shields.io/github/last-commit/AbhilashTUofficial/Flutter-programming?color=blue&label=Last%20Commit%3A&style=for-the-badge)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/AbhilashTUofficial/Flutter-programming?label=Repo%20Size%3A&style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/AbhilashTUofficial/Games?color=blue&label=Last%20Commit%3A&style=for-the-badge)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/AbhilashTUofficial/Games?label=Repo%20Size%3A&style=for-the-badge)
 ### Connect with me :  
 <a href="https://github.com/AbhilashTUofficial" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
