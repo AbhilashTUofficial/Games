@@ -25,8 +25,9 @@ class Piece:
     
     def draw(self,win):
         radius=squareSize//2-self.padding
-        pygame.draw.circle(win,self.grey,(self.x,self.y),radius+self.outline)
+        pygame.draw.circle(win,self.color,(self.x,self.y),radius+self.outline)
         pygame.draw.circle(win,self.color,(self.x,self.y),radius)
+    
     def __repr__(self):
         return str(self.color)
 
