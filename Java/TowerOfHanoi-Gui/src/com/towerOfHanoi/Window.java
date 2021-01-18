@@ -2,6 +2,7 @@ package com.towerOfHanoi;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Arrays;
 
 class screen{
     int x=200;
@@ -43,24 +44,7 @@ class tower extends screen{
     int pegCTipX=pegCX-1;
     int pegCTipY=pegCY-pegTipRadius/2;
 }
-class disks extends tower{
-    int diskHeight=20;
-    int calcDiskCenterX(){
-        return 0;
-    }
-    int calcDiskCenterY(){
-        return 0;
-    }
-}
-class diskTop extends tower{
 
-}
-class diskMiddle extends tower{
-
-}
-class diskBottom extends tower{
-
-}
 
 
 public class Window extends JFrame {
@@ -71,17 +55,24 @@ public class Window extends JFrame {
         win.setVisible(true);
         win.setResizable(false);
         win.setTitle("Tower Of Hanoi");
-
-
     }
     public void paint(Graphics g){
+        GameLogic game=new GameLogic();
         screen scr=new screen();
-        tower tow=new tower();
         g.setColor(scr.backGroundColor);
         g.fillRect(0,0,scr.width,scr.height);
         g.setColor(scr.innerContBackGroundColor);
         g.fillRect(scr.innerContX,scr.innerContY,scr.innerContWidth,scr.innerContHeight);
-
+        drawPegs(g);
+        game.drawDisk(g);
+        g.dispose();
+        repaint();
+    }
+    public void drawPegs(Graphics g){
+        tower tow=new tower();
+        diskTop top=new diskTop();
+        diskMiddle mid=new diskMiddle();
+        diskBottom bot=new diskBottom();
         g.setColor(tow.pegColor);
         // Peg A
         g.fillRect(tow.pegAX,tow.pegAY,tow.pegWidth,tow.pegHeight);
@@ -95,10 +86,6 @@ public class Window extends JFrame {
         g.fillRect(tow.pegCX,tow.pegCY,tow.pegWidth,tow.pegHeight);
         g.fillRect(tow.pegCFeetX,tow.pegCFeetY,tow.pegFeetWidth,tow.pegFeetHeight);
         g.fillOval(tow.pegCTipX,tow.pegCTipY,tow.pegTipRadius,tow.pegTipRadius);
-        // Disk
-        g.setColor(Color.ORANGE);
-        g.fillRect(tow.pegAX+5-(145/2),tow.pegAY+tow.pegHeight-40,145,30);
-
     }
 }
 
