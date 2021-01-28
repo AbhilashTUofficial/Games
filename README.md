@@ -28,7 +28,7 @@ Developing games is one of the best ways to learn to program. So I have to build
 </a>
 <a href="https://codepen.io/abhilash-tu" target="_blank">
 <img src=https://img.shields.io/badge/codepen-%23131417.svg?&style=for-the-badge&logo=codepen&logoColor=white alt=codepen style="margin-bottom: 5px;" />
-</a>
+</a> 
 <a href="https://twitter.com/Abhilash_TU" target="_blank">
 <img src=https://img.shields.io/badge/twitter-%2300acee.svg?&style=for-the-badge&logo=twitter&logoColor=white alt=twitter style="margin-bottom: 5px;" />
 </a>
