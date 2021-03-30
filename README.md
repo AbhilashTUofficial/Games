@@ -1,57 +1,59 @@
 # Games
 Developing games is one of the best ways to learn to program. So I have to build a lot of simple to intermediate games. Some of them have GUI and others just work on the terminal. Overall these projects were fun and really enjoyed them. So far I only used java and python for it.
 ### Languages & tools :
-[<img align="left" alt="Intellij" width="26px" src="https://github.com/AbhilashTUofficial/AbhilashTuofficial/blob/main/logos/tools/intellij.png">][java]
-[<img align="left" alt="Pycharm" width="26px" src="https://github.com/AbhilashTUofficial/AbhilashTuofficial/blob/main/logos/tools/pycharm.png">][python]
-[<img align="left" alt="Git" width="26px" src="https://github.com/AbhilashTUofficial/AbhilashTuofficial/blob/main/logos/tools/git.png">][github]
-[<img align="left" alt="Terminal" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png">][github]
-[<img align="left" alt="python" width="26px" src="https://github.com/AbhilashTUofficial/AbhilashTuofficial/blob/main/logos/tools/python.png">][python]
-[<img align="left" alt="Java" width="32px" src="https://github.com/AbhilashTUofficial/AbhilashTuofficial/blob/main/logos/tools/java.png">][java]
+[<img align="left" alt="Intellij" width="32px" src="./Img/intellij.png">][java]
+[<img align="left" alt="Pycharm" width="28px" src="./Img/pycharm.png">][python]
+[<img align="left" alt="python" width="28px" src="./Img/python.png">][python]
+[<img align="left" alt="Java" width="32px" src="./Img/java.png">][java]
 <br/><br/>
 ![GitHub last commit](https://img.shields.io/github/last-commit/AbhilashTUofficial/Games?color=blue&label=Last%20Commit%3A&style=for-the-badge)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/AbhilashTUofficial/Games?label=Repo%20Size%3A&style=for-the-badge)
+|Java Pong| Python Pong Menu |Python Pong Game|Python Snake Game|
+|------|-------|-------|------|
+|[<img align="left" alt="Pong game" width="200px" src="./Img/javaPong1.png">][java pong]|[<img align="left" alt="Pong game" width="250px" src="./Img/pythonPong1.png">][python pong]|[<img align="left" alt="Pong game" width="250px" src="./Img/pythonPong2.png">][python pong]|[<img align="left" alt="Pong game" width="200px" src="./Img/pythonSnakeGame.png">][python snake game]|
+|Java BlockCrush|gameover|Python Connect4|Python Connect4|
+|[<img align="left" alt="Pong game" width="250px" src="./Img/javaBlockCrush1.png">][java block crush]|[<img align="left" alt="Pong game" width="250px" src="./Img/javaBlockCrush2.png">][java block crush]|[<img align="left" alt="Python connect four" width="200px" src="./Img/pythonConnectFour1.png">][python connect4]|[<img align="left" alt="Python connect four" width="200px" src="./Img/pythonConnectFour1.png">][python connect4]|
+|Python Tic Tac Toe|Python Tic Tac Toe|
+[<img align="left" alt="Python Tic Tac Toe" width="200px" src="./Img/pythonTicTacToe1.png">][python tic tac toe]|[<img align="left" alt="Python Tic Tac Toe" width="200px" src="./Img/pythonTicTacToe2.png">][python tic tac toe]|
+
+### Directory Structure :
+    |-- Java
+    |    |-- blokcBreaker
+    |    |-- blokcBreaker-java
+    |    |-- blokcBreaker v2.0
+    |    |-- HideAndSeek
+    |    |-- Pong(minimal)-java
+    |    |-- TowerOfHanoi-Gui
+    |    |-- TowerOfHanoi-Terminal
+    |
+    |-- Python
+    |    |-- Checkers-python
+    |    |-- Connect four-python
+    |    |-- pong-python
+    |    |-- Snake-python
+    |    |-- Tetris-python
+    |    |-- Tic tac toe
+    |
+    |-- Img
+
 ### Connect with me :  
-<a href="https://github.com/AbhilashTUofficial" target="_blank">
-<img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
-</a>
-<a href="https://stackoverflow.com/story/abhilash-tu" target="_blank">
-<img src=https://img.shields.io/badge/stackoverflow-%23F28032.svg?&style=for-the-badge&logo=stackoverflow&logoColor=white alt=stackoverflow style="margin-bottom: 5px;" />
-</a>
-<a href="https://www.linkedin.com/in/abhilash-tu-160630190/" target="_blank">
-<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
-</a>
-<a href="https://medium.com/@abhilash-tu" target="_blank">
-<img src=https://img.shields.io/badge/medium-%23292929.svg?&style=for-the-badge&logo=medium&logoColor=white alt=medium style="margin-bottom: 5px;" />
-</a>
-<a href="https://dev.to/abhilashtuofficial" target="_blank">
-<img src=https://img.shields.io/badge/dev.to-%2308090A.svg?&style=for-the-badge&logo=dev.to&logoColor=white alt=devto style="margin-bottom: 5px;" />
-</a>
-<a href="https://codepen.io/abhilash-tu" target="_blank">
-<img src=https://img.shields.io/badge/codepen-%23131417.svg?&style=for-the-badge&logo=codepen&logoColor=white alt=codepen style="margin-bottom: 5px;" />
-</a> 
 <a href="https://twitter.com/Abhilash_TU" target="_blank">
 <img src=https://img.shields.io/badge/twitter-%2300acee.svg?&style=for-the-badge&logo=twitter&logoColor=white alt=twitter style="margin-bottom: 5px;" />
-</a>
-<a href="https://dribbble.com/Abhilash_Tu" target="_blank">
-<img src=https://img.shields.io/badge/dribbble-%23E45285.svg?&style=for-the-badge&logo=dribbble&logoColor=white alt=dribbble style="margin-bottom: 5px;" />
 </a>
 <a href="https://www.facebook.com/Abhilashtuofficial" target="_blank">
 <img src=https://img.shields.io/badge/facebook-%232E87FB.svg?&style=for-the-badge&logo=facebook&logoColor=white alt=facebook style="margin-bottom: 5px;" />
 </a>
 <a href="https://www.instagram.com/abhilash_tu/" target="_blank">
 <img src=https://img.shields.io/badge/instagram-%23000000.svg?&style=for-the-badge&logo=instagram&logoColor=white alt=instagram style="margin-bottom: 5px;" />
-</a>
-<a href="https://www.youtube.com/channel/UC8iP2LKB-V1g2jMTbe6Pb4Q" target="_blank">
-<img src=https://img.shields.io/badge/youtube-%23EE4831.svg?&style=for-the-badge&logo=youtube&logoColor=white alt=youtube style="margin-bottom: 5px;" />
-</a>
-<a href="https://www.behance.net/abhilashstorm" target="_blank">
-<img src=https://img.shields.io/badge/behance-%23191919.svg?&style=for-the-badge&logo=behance&logoColor=white alt=behance style="margin-bottom: 5px;" />
-</a>   
-<a href="https://discord.com/" target="_blank">
-<img src=https://img.shields.io/badge/discord-%23191919.svg?&style=for-the-badge&logo=discord&logoColor=white alt=behance style="margin-bottom: 5px;" />
-</a>   
+</a>  
 <br/>
 
+[python tic tac toe]: https://github.com/AbhilashTUofficial/TicTacToe-PythonGame
+[python connect4]: https://github.com/AbhilashTUofficial/Connect4-PythonGame
+[python snake game]:https://github.com/AbhilashTUofficial/Snake-PythonGame
+[java block crush]: https://github.com/AbhilashTUofficial/BlockCrush-JavaGame
+[python pong]: https://github.com/AbhilashTUofficial/Pong-PythonGame
+[java pong]: https://github.com/AbhilashTUofficial/Pong-JavaGame
 [github]: https://github.com/AbhilashTUofficial
 [python]: https://github.com/AbhilashTUofficial/Python-programming
 [java]: https://github.com/AbhilashTUofficial/java-programming
